@@ -1,21 +1,21 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from usuario import Usuario  # Importar a classe Usuario do módulo usuario
+from usuario import Usuario
 from datetime import datetime, timedelta
 import openpyxl
 
 app = Flask(__name__, template_folder='paginas')
-app.secret_key = 'sua_chave_secreta'  # Definir uma chave secreta para sessões
-app.config['SESSION_COOKIE_NAME'] = 'session'  # Nome do cookie da sessão
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=0)  # Expirar o cookie da sessão quando o navegador for fechado  # Definir uma chave secreta para sessões
+app.secret_key = 'lks147' 
+app.config['SESSION_COOKIE_NAME'] = 'session' 
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=0)  
 
-# Rota de login
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         cpf = request.form['cpf']
         senha = request.form['senha']
 
-        usuario = Usuario(cpf)  # Criar uma instância de Usuario com o CPF fornecido
+        usuario = Usuario(cpf)  
 
         if usuario.carregar_data_cadastro() and usuario.validar_senha(senha):
             session['logged_in'] = True
@@ -26,7 +26,7 @@ def login():
 
     return render_template('login.html', mensagem='')
 
-# Rota principal para exibir o tempo restante
+
 @app.route('/')
 def mostrar_tempo_restante():
     if 'logged_in' not in session or not session['logged_in']:
@@ -39,7 +39,7 @@ def mostrar_tempo_restante():
     return render_template('index.html', cpf=cpf, tempo_restante=tempo_restante)
     
 
-# Rota de logout
+
 @app.route('/logout')
 def logout():
     session.pop('logged_in', None)
