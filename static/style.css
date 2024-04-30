@@ -71,7 +71,7 @@ h2 {
 
 h1 {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-family: padrão;
     font-style: normal;
     font-weight: 400;
@@ -88,9 +88,11 @@ h1 {
 form {
     position: relative;
     z-index: 3; 
-    width: 450px;
+    width: 300px;
     height: 267px;
-    background-color: rgba(127, 255, 212, 0.233);
+    margin-left: 75px;
+    margin-right: 75px;
+    align-items: center;
 }
 
 input {
@@ -98,8 +100,41 @@ input {
     margin-bottom: 10px;
 }
 
+.cpf{
+    width: 276px;
+    height: 32px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    background: #303030;
+    border-radius: 5px ;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    
+}
+
+.sen{
+    width: 276px;
+    height: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #303030;
+    border-radius: 5px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  
+}
+
+.button{
+    width: 132px;
+    height: 37px;
+    margin-top: 20px;
+    background: #303030;
+    border-radius: 5px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    color: #FFFFFF;
+    outline-color: #460000;
+}
+
 .forms {
-    margin-top: 10px;
+    
     margin-bottom: 23px;
     width: 450px;
     height: 267px;
