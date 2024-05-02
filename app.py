@@ -35,9 +35,12 @@ def mostrar_tempo_restante():
 
     cpf = session['cpf']
     usuario = Usuario(cpf)
-    usuario.carregar_data_cadastro()
-    tempo_restante = usuario.calcular_tempo_restante()
-    return render_template('index.html', cpf=cpf, tempo_restante=tempo_restante)
+    if usuario.carregar_data_cadastro():  
+        tempo_restante = usuario.calcular_tempo_restante()
+        nome = usuario.nome  
+        return render_template('index.html', cpf=cpf, nome=nome, tempo_restante=tempo_restante)
+    else:
+        return "Usuário não encontrado"
     
 
 

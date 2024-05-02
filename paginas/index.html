@@ -4,25 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style2.css">   
-     <title>Tempo Restante de Filiação</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 20px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Tempo Restante de Filiação</title>
 </head>
 <body>
-    <h1>Tempo Restante de Filiação</h1>
-    <p>CPF: <strong>{{ cpf }}</strong></p>
-    <p>O tempo restante para renovar sua filiação é de <strong>{{ tempo_restante }}</strong> dias.</p>
+    <div>
+        <h1>Tempo Restante de Filiação</h1>
+        <p><strong>{{ nome }}</strong></p> 
+        <p>CPF: <strong>{{ cpf }}</strong></p>
+        <p>O tempo restante para renovar sua filiação é de <strong>{{ tempo_restante['dias_restantes'] }}</strong> dias.</p>
+        <p>Ela terminará em: <strong>{{ tempo_restante['data_limite'] }}</strong></p>
+    </div>
 </body>
 </html>

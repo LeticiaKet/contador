@@ -4,6 +4,7 @@ import openpyxl
 class Usuario:
     def __init__(self, cpf):
         self.cpf = cpf
+        self.nome = None
         self.data_cadastro = None
 
     def carregar_data_cadastro(self):
@@ -12,7 +13,9 @@ class Usuario:
             sheet = workbook.active
             for row in sheet.iter_rows(values_only=True):
                 if str(row[0]) == str(self.cpf):
+                    self.nome = row[2] 
                     self.data_cadastro = row[1]
+                     
                     workbook.close()
                     return True
             workbook.close()
@@ -29,5 +32,8 @@ class Usuario:
         if self.data_cadastro:
             data_limite = self.data_cadastro + timedelta(days=180)
             tempo_restante = data_limite - datetime.today()
-            return tempo_restante.days if tempo_restante.days > 0 else 0
-        return 0
+            return {'dias_restantes': tempo_restante.days if tempo_restante.days > 0 else 0,
+                    'data_limite': data_limite.strftime('%d/%m/%Y')}
+        return {'dias_restantes': 0, 'data_limite': None}
+
+
