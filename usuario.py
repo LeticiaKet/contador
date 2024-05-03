@@ -33,7 +33,6 @@ class Usuario:
             data_limite = self.data_cadastro + timedelta(days=180)
             tempo_restante = data_limite - datetime.today()
             return {'dias_restantes': tempo_restante.days if tempo_restante.days > 0 else 0,
-                    'data_limite': data_limite.strftime('%d/%m/%Y')}
-        return {'dias_restantes': 0, 'data_limite': None}
-
-
+                    'data_limite': data_limite.strftime('%d/%m/%Y'),
+                    'data_cadastro': self.data_cadastro.strftime('%d/%m/%Y')}
+        return {'dias_restantes': 0, 'data_limite': None, 'data_cadastro': None}
