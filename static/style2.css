@@ -76,17 +76,18 @@ body {
 
 
 .text{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     position: absolute;
     z-index: 4;
-    width: 450px;
-    height: 600px;
+    width: 841px;
+    height: 502px;
     background: #0C0C0C;
     border-radius: 19px;
 
 }
 
 h1 {
-    color: #004edf;
+    color: #ffffff;
 }
 p {
     font-size: 20px;
