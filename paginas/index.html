@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/style2.css">   
+    <link rel="stylesheet" href="static/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&display=swap" rel="stylesheet">   
     <title>Tempo Restante de Filiação</title>
 </head>
 <body>
@@ -13,13 +16,13 @@
     </div>
     <div class="gradient-overlay"></div>
     <div class="info">
-        <div class="text">
-            <h1>Olá </h1>
-            <p><strong>{{ nome }}</strong> 
-            <p>CPF: <strong>{{ cpf }}</strong> </p> </p>
-            <p>Data de cadastro: <strong>{{ tempo_restante.data_cadastro }}</strong></p>
-            <p>O tempo até a data de finalização é de <br> <strong>{{ tempo_restante.dias_restantes }} dias.</strong> </p>
-            <p>Ela terminará em: <strong>{{ tempo_restante.data_limite }}</strong></p>
+        <div class="text">  
+            <p class="titulo">Olá,  {{ nome }} </p>
+            <p class="inu">CPF: {{ cpf }}</p>
+            <p class="inu">Data de cadastro: {{ tempo_restante.data_cadastro }}</p>
+            <p class="novo">Fidelização ativa até: <strong>{{ tempo_restante.data_limite }} </strong></p>
+            <p class="novo">Você ainda tem <br> <strong >{{ tempo_restante.dias_restantes }} dias restantes.</strong> </p>
+            
         </div>
     </div>
 </body>

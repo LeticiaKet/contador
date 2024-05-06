@@ -1,9 +1,5 @@
-@font-face {
-    font-family: padrão;
-    src: url(fonts/LifeCraft.ttf) format('truetype');
 
-}
-
+/*backgroud*/
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -62,6 +58,22 @@ body {
     pointer-events: none; 
 }
 
+
+
+/*informações*/
+
+
+
+p {
+    font-family: "Jersey 10", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 45px;
+    
+    color: #000000;
+}
+
 .info{
     display: flex;
     align-items: center;
@@ -81,16 +93,40 @@ body {
     z-index: 4;
     width: 841px;
     height: 502px;
-    background: #0C0C0C;
+    background: rgba(255, 255, 255, 0.678);
     border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
 }
 
-h1 {
-    color: #ffffff;
+.titulo{
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 71px;
+    margin-top: 40px;
+    margin-bottom: 14px;
 }
-p {
-    font-size: 20px;
-    margin: 20px 20px 20px 20px;
-    color: aliceblue;
+
+.inu{
+    color: #474747;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 37px;
+}
+
+.novo{
+    color: #2c2c2c;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 40px;
+}
+
+strong {
+    font-weight: 400;
+    color: #000000; /* Altera a grossura da fonte para um valor mais espesso */
 }
