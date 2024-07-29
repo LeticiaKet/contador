@@ -6,7 +6,7 @@ import openpyxl
 app = Flask(__name__, template_folder='paginas')
 app.secret_key = 'lks147' 
 app.config['SESSION_COOKIE_NAME'] = 'session' 
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=60) 
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=61) 
 app.static_folder = 'static' 
 
 
