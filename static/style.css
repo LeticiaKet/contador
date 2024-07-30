@@ -136,7 +136,7 @@ input {
     background: #303030;
     border-radius: 5px ;
     transform: matrix(1, 0, 0, 1, 0, 0);
-    
+    color: #eeeeee;
 }
 
 .sen{
@@ -147,7 +147,7 @@ input {
     background: #303030;
     border-radius: 5px;
     transform: matrix(1, 0, 0, 1, 0, 0);
-  
+    color: #eeeeee;
 }
 
 .button{
@@ -178,4 +178,116 @@ input {
     height: 600px;
     background: #0C0C0C;
     border-radius: 19px;
+}
+
+
+
+@media screen and (max-width: 1020px) {    
+    
+    h1 {
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 70px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-family: padrão;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 52px;
+    }
+    .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .reverse {
+        display: none;
+    }
+
+    .logo {
+        width: 300px;
+        height: 273px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-position: center;
+        position: static;
+
+    }
+
+    .log {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .login {
+        width: 300px;
+        height: 400px;
+        margin-top: 200px;
+    }
+
+    .forms {
+        
+        width: 300px;
+        height: 215px;
+        margin-bottom: 0;
+    }
+
+    .cpf{
+        width: 232px;
+        height: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: #303030;
+        border-radius: 5px ;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        color: #eeeeee; /* Cor da escrita */
+    }
+
+    .sen{
+        width: 232px;
+        height: 25px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        background: #303030;
+        border-radius: 5px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        color: #eeeeee;
+    }
+
+    .button{
+        width: 132px;
+        height: 37px;
+        margin-top: 15px;
+        background: #303030;
+        border-radius: 5px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        color: #FFFFFF;
+        outline-color: #460000;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

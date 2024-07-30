@@ -7,26 +7,26 @@
 <title>Login</title>
 </head>
 <body>
-    <div class="image">
-        <div class="logo"></div>
-        <div class="reverse"></div>
-    </div>
-    <div class="gradient-overlay"></div>
-    <div class="log">
-        <div class="login">
-                    <h2>Bem Vindo</h2>
-                    <h1>Imperial</h1>
-                {% if mensagem %}
-                    <p class="mensagem">{{ mensagem }}</p>
-                {% endif %}
-            <div class="forms">
-                <form method="POST" action="{{ url_for('login') }}">
-                    <input type="text" class="cpf" name="cpf" placeholder="CPF" maxlength="11"required><br>
-                    <input type="password" class="sen" name="senha" placeholder="Senha (6 primeiros dígitos do CPF)" required><br>
-                    <input type="submit" class="button" value="Entrar">
-                </form>
+        <div class="image">
+            <div class="logo"></div>
+            <div class="reverse"></div>
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="log">
+            <div class="login">
+                        <h2>Bem Vindo</h2>
+                        <h1>Imperial</h1>
+                    {% if mensagem %}
+                        <p class="mensagem">{{ mensagem }}</p>
+                    {% endif %}
+                <div class="forms">
+                    <form method="POST" action="{{ url_for('login') }}">
+                        <input type="text" class="cpf" name="cpf" placeholder="CPF" maxlength="11"required><br>
+                        <input type="password" class="sen" name="senha" placeholder="Senha (6 primeiros dígitos do CPF)" required><br>
+                        <input type="submit" class="button" value="Entrar">
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
