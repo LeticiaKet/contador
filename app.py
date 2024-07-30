@@ -6,7 +6,7 @@ import openpyxl
 app = Flask(__name__, template_folder='paginas')
 app.secret_key = 'lks147' 
 app.config['SESSION_COOKIE_NAME'] = 'session' 
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=61) 
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=7200) 
 app.static_folder = 'static' 
 
 
@@ -38,7 +38,7 @@ def mostrar_tempo_restante():
     usuario.carregar_data_cadastro()
     if usuario.carregar_data_cadastro():  
         tempo_restante = usuario.calcular_tempo_restante()
-        nome = usuario.nome  
+        nome = usuario.get_primeiro_segundo_nome() 
         return render_template('index.html', cpf=cpf, nome=nome, tempo_restante=tempo_restante)
     else:
         return "Usuário não encontrado"

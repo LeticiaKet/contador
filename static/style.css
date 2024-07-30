@@ -182,7 +182,7 @@ input {
 
 
 
-@media screen and (max-width: 1020px) {    
+@media screen and (max-width: 600px) {    
     
     h1 {
         font-weight: 400;
@@ -201,6 +201,7 @@ input {
         font-size: 52px;
         line-height: 52px;
     }
+
     .image {
         display: flex;
         flex-direction: column;

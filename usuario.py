@@ -22,6 +22,15 @@ class Usuario:
         except Exception as e:
             print(f"Erro ao carregar dados do usuário: {e}")
         return False
+    
+    def get_primeiro_segundo_nome(self):
+        if self.nome:
+            nomes = self.nome.split()
+            if len(nomes) > 1:
+                return f"{nomes[0]} {nomes[1]}"
+            else:
+                return nomes[0]
+        return ""
 
     def validar_senha(self, senha):
         cpf_sem_zeros = str(self.cpf).lstrip('0')

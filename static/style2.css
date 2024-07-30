@@ -93,7 +93,7 @@ p {
     z-index: 4;
     width: 841px;
     height: 502px;
-    background: rgba(255, 255, 255, 0.678);
+    background: rgba(194, 194, 194, 0.822);
     border-radius: 19px;
     display: flex;
     flex-direction: column;
@@ -112,11 +112,26 @@ p {
     margin-bottom: 14px;
 }
 
+.inucpf{
+    color: #000000;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 37px;
+}
+
 .inu{
     color: #474747;
     margin-top: 14px;
     margin-bottom: 14px;
     font-size: 37px;
+}
+
+
+.novodata{
+    color: #333333;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 40px;
 }
 
 .novo{
@@ -130,3 +145,99 @@ strong {
     font-weight: 400;
     color: #000000;
 }
+
+
+
+@media screen and (max-width: 600px) {    
+    
+    .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .reverse {
+        display: none;
+    }
+
+    .logo {
+        width: 300px;
+        height: 273px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-position: center;
+        position: static;
+
+    }
+
+    .text {
+        width: 350px;
+        height: 450px;
+        position: fixed;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px; 
+        background: rgba(194, 194, 194, 0.822);
+        border-radius: 19px;
+        box-sizing: border-box;
+        z-index: 3;
+    }
+
+    .titulo{
+        font-family: "Bebas Neue", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 71px;
+        margin-top: 30px;
+        margin-bottom: 2px;
+    }
+    
+    .inucpf{
+        color: #000000;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: 35px;
+    }
+
+    .inu{
+        color: #5a5a5a;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    
+    .novodata{
+        color: #333333;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 37px;
+    }
+
+    .novo{
+        color: #333333;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 37px;
+    }
+    
+    strong {
+        font-weight: 400;
+        font-size: 40px;
+        color: #000000;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+    
